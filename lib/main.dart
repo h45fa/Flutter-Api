@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:load_add_edit/screens/todo_list.dart';
+import 'package:load_add_edit/pages/weather_page.dart';
 
 void main() {
   runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
 }
 
 class MyApp extends StatelessWidget {
@@ -10,10 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: const TodoListPage(),
+      home: WeatherPage(),
     );
   }
 }
